@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, TouchableOpacity, Image, Text } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
-import { Button } from 'react-native-paper';
 
 const HomeScreen = ({ navigation }) => {
   const [yourPhoto, setYourPhoto] = useState(null);
@@ -56,15 +55,14 @@ const HomeScreen = ({ navigation }) => {
           )}
         </TouchableOpacity>
       </View>
-      <Button
-        mode="contained"
-        onPress={handleAnalyze}
+      <TouchableOpacity
         style={styles.analyzeButton}
-        contentStyle={styles.analyzeButtonContent}
-        labelStyle={styles.analyzeButtonLabel}
+        onPress={handleAnalyze}
       >
-        Analyze Compatibility
-      </Button>
+        <Text style={styles.analyzeButtonLabel}>
+          Analyze Compatibility
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -110,9 +108,9 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     backgroundColor: '#222',
     marginTop: 8,
-  },
-  analyzeButtonContent: {
-    paddingVertical: 10,
+    paddingVertical: 16,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   analyzeButtonLabel: {
     color: '#fff',
@@ -121,4 +119,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen; 
+export default HomeScreen;

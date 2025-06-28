@@ -11,7 +11,7 @@ config.resolver = {
     /ios\/.*/,
   ]),
   sourceExts: ['jsx', 'js', 'ts', 'tsx', 'json'],
-  assetExts: ['png', 'jpg', 'jpeg', 'gif', 'webp']
+  assetExts: ['png', 'jpg', 'jpeg', 'gif', 'webp', 'ttf', 'otf', 'woff', 'woff2']
 };
 
 // Add proper transformer configuration
